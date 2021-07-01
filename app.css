@@ -32,18 +32,62 @@
     height: 100%;
     margin: auto;
     text-align: center;
-    transition: .5s ease;
+    transition: .5s;
+    position: relative;
+    color: white;
+    cursor: pointer;
+    
+}
+
+.bannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    font-size: 7vw;
+}
+
+.bannerText:hover {
+    opacity: 0.7;
 }
 
 #UOimage {
-    cursor: pointer;
+    -backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 
-#banner:hover {
-    opacity: 0.3;
+#UOimage:hover {
+    opacity: 0.7;
 }
 
 img {
     max-width: 100%;
     display: inline-block;
+}
+
+#joinNow {
+    background-color: #ecc900;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 0%;
+    margin-top: 0%;
+}
+
+.joinNowText {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0%;
+    padding: 0%;
+    font-size: 30px;
+}
+
+.rewardSteps {
+    display: block;
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
 }
