@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+
+
 .navbar {
     top: 0px;
     width: 100%;
@@ -48,8 +50,8 @@
     font-size: 7vw;
 }
 
-.bannerText:hover {
-    opacity: 0.7;
+.bannerText:hover, #UOimage:hover, #joinNow:hover, .joinNowText:hover, .imgJoin:hover {
+    opacity: 0.8;
 }
 
 #UOimage {
@@ -60,17 +62,13 @@
     -webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 
-#UOimage:hover {
-    opacity: 0.7;
-}
-
 img {
     max-width: 100%;
     display: inline-block;
 }
 
 #joinNow {
-    background-color: #ecc900;
+    background-color: #dbb300;
     color: whitesmoke;
     text-align: center;
     padding-top: 0%;
@@ -83,6 +81,7 @@ img {
     margin: 0%;
     padding: 0%;
     font-size: 30px;
+    z-index: 99;
 }
 
 .rewardSteps {
@@ -94,4 +93,10 @@ img {
 
 #rewardNum {
     display: flex;
+}
+
+.courier {
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: .05 rem;
+    font-size: 1.4 rem;
 }
