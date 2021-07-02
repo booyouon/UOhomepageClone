@@ -9,30 +9,89 @@
     src: url(urban-outfitters-font/League\ Gothic.otf);
 }
 
+body {
+    font: Helvetica, Arial, sans-serif;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
     background-color: white;
+}
+
+#BDGcontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#bdgNav {
+    background-color: rgb(240, 240, 240);
+}
+
+#BDGLogo {
+    padding-right: 20px;
+    border-right: 1px solid rgb(207, 207, 207);
 }
 
 #UOlogo {
     font-family: League;
-    font-size: 20em;
-    letter-spacing: 5px;
+    font-size: 35px;
+    max-width: 100%;
+    height: auto;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-#navLinks {
-    font-size: 15px;
+.navLinks {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.navLinks a, #UOlogo a{
+    text-decoration: none;
+    color: black;
+}
+
+#shippingInfo a:hover{
+    text-decoration: none;
+}
+
+.navLinks li{
+    list-style: none;
+}
+
+#shippingInfo, #shippingInfo a{
+    color: rgb(121, 121, 121);
+    font-size: 14px;
+}
+
+#shippingInfo{
+    padding-left: 20px;
+}
+
+#bdgLinks {
+    font-size: 14px;
+    white-space: nowrap;
+    width: 15%;
+    justify-content: space-evenly;
+}
+
+#bdgLinks a:hover{
+    opacity: 0.6;
+}
+
+.centerlink{
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .centerlink:hover {
-    border-bottom: 1px solid #000;
-    padding-bottom: 3px;
-}
-
-#mainNavBar {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid rgb(121, 121, 121);
+    opacity: 0.6;
 }
 
 #banner {
