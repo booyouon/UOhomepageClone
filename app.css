@@ -18,11 +18,11 @@ nav {
     justify-content: space-around;
     align-items: center;
     background-color: white;
+    flex-direction: row;
 }
 
-#BDGcontainer {
+#BDGcontainer, #searchContainer {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -34,6 +34,10 @@ nav {
 #BDGLogo {
     padding-right: 20px;
     border-right: 1px solid rgb(207, 207, 207);
+}
+
+#UOnav {
+    border-bottom: 1px solid rgb(207, 207, 207);
 }
 
 #UOlogo {
@@ -48,7 +52,8 @@ nav {
 .navLinks {
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 25%;
+    font-size: 14px;
 }
 
 .navLinks a, #UOlogo a{
@@ -80,7 +85,7 @@ nav {
     justify-content: space-evenly;
 }
 
-#bdgLinks a:hover{
+#bdgLinks a:hover, #cart:hover{
     opacity: 0.6;
 }
 
@@ -92,6 +97,15 @@ nav {
 .centerlink:hover {
     border-bottom: 1px solid rgb(121, 121, 121);
     opacity: 0.6;
+}
+
+input{
+    padding: 10px;
+}
+
+#cart {
+    color:black;
+    padding-left: 25px;
 }
 
 #banner {
@@ -108,12 +122,13 @@ nav {
 }
 
 .bannerText {
+    font-family: League;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
-    font-size: 7vw;
+    font-size: 10vw;
 }
 
 .bannerText:hover, #UOimage:hover, #joinNow:hover, .joinNowText:hover, .imgJoin:hover {

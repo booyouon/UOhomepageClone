@@ -16,5 +16,7 @@
     "url": "https://github.com/booyouon/UOhomepageClone/issues"
   },
   "homepage": "https://github.com/booyouon/UOhomepageClone#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
 }
