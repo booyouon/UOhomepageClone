@@ -4,6 +4,7 @@
     padding: 0px;
     font-family: sans-serif;
     font-size: 12px;
+    line-height: 1.5;
 }
 
 @font-face {
@@ -166,7 +167,7 @@ img {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 110em
+    width: 80%;
 }
 
 .rewardSteps {
@@ -207,4 +208,54 @@ img {
 
 #numbers, .imgJoin{
     padding-bottom: 50px;
+}
+
+.one {
+    background-color:rgb(6, 205, 255); 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 25px; 
+    left: 130px; 
+    top: -50px; 
+    position: absolute;
+    cursor: pointer;
+}
+
+.two {
+    background-color:rgb(56, 238, 0); 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 25px; 
+    left: 130px; 
+    top: -50px; 
+    position: absolute;
+}
+
+#bottomInfoGetText {
+    width: 60%;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#bottomInfoGetText p{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.howRow1, .howRow2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 15px;
+}
+
+.howRow1 div, .howRow2 div{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    height: 110px;
+    width: 18vw;
+    justify-content: center;
+    align-items: center;
 }
