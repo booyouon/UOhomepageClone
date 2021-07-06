@@ -114,16 +114,21 @@ input{
 }
 
 .bannerText{
-    font-family: League;
     position: absolute;
-    top: 45%;
-    left: 50%;
+    top: 25vw;
+    left: 50vw;
     transform: translate(-50%, -50%);
     z-index: 99;
-    font-size: 10vw;
 }
 
-.bannerText:hover, #UOimage:hover, #joinNow:hover, .joinNowText:hover, .imgJoin:hover, .one:hover {
+.bannerText p{
+    position: relative;
+    font-family: League;
+    font-size: 10vw;
+    margin: auto;
+}
+
+.bannerText:hover, #UOimage:hover, #joinNow:hover, .joinNowText:hover, .imgJoin:hover, #one:hover {
     opacity: 0.8;
 }
 
@@ -192,9 +197,9 @@ img {
     color: white;
 }
 
-#joinUOtext h1, #getText h1{
+ h1 {
     font-size: 30px;
-    padding: 10px;
+    padding: 5px;
     top: 10%;
 }
 
@@ -210,25 +215,20 @@ img {
     padding-bottom: 50px;
 }
 
-.one {
-    background-color:rgb(6, 205, 255); 
+.circle {
     width: 50px; 
     height: 50px; 
     border-radius: 25px; 
-    left: 130px; 
-    top: -50px; 
-    position: absolute;
+    margin: auto;
+}
+
+#one {
+    background-color:rgb(6, 205, 255); 
     cursor: pointer;
 }
 
-.two {
+#two {
     background-color:rgb(56, 238, 0); 
-    width: 50px; 
-    height: 50px; 
-    border-radius: 25px; 
-    left: 130px; 
-    top: -50px; 
-    position: absolute;
 }
 
 #bottomInfoGetText {
@@ -292,3 +292,9 @@ img {
 #fiveDollars h1 {
     font-size: 50px;
 }
+
+#three {
+    background-color: rgb(230, 195, 2);
+    color: white;
+}
+
