@@ -236,11 +236,12 @@ img {
     position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
+    margin: auto;
 }
 
 #bottomInfoGetText p{
     font-family: 'Courier New', Courier, monospace;
-
+    
 }
 
 .howRow1, .howRow2 {
