@@ -61,7 +61,56 @@ nav {
     color: black;
 }
 
-#shippingInfo a:hover{
+.dropDown {
+    border: 1px solid rgb(207, 207, 207); 
+    padding: 20px 20px 0px 20px; 
+    position: absolute; 
+    left: 12vw;
+    background-color: white; 
+    width: 70vw; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    z-index: 999;
+}
+
+.dropDown div ul li{
+    padding: 7px 0px;
+}
+
+.dropDown div ul{
+    list-style: none;
+}
+
+.shopCat{
+    display: flex;
+    flex-direction: row;
+}
+
+.shopCat ul{
+    margin-right: 9vw;
+}
+
+.shopCat ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+.tenPercent{
+    display: flex; 
+    justify-content: center; 
+    align-items:center; 
+    background-color: black; 
+    color: white; 
+    height: 40px;
+}
+
+.tenPercent a{
+    color: inherit; 
+    padding-left: 5px;
+}
+
+#shippingInfo a:hover, .tenPercent a:hover{
     text-decoration: none;
 }
 
@@ -82,7 +131,7 @@ nav {
     width: 250px;
 }
 
-#bdgLinks a:hover, #cart:hover{
+#bdgLinks a:hover, #cart:hover, .shopCat ul li a:hover{
     opacity: 0.6;
 }
 
@@ -223,12 +272,14 @@ img {
 }
 
 #one {
-    background-color:rgb(6, 205, 255); 
+    background: rgb(0,186,169);
+    background: linear-gradient(228deg, rgba(0,186,169,1) 36%, rgba(0,247,225,1) 86%);
     cursor: pointer;
 }
 
 #two {
-    background-color:rgb(56, 238, 0); 
+    background: rgb(24,179,0);
+    background: linear-gradient(228deg, rgba(24,179,0,1) 36%, rgba(23,218,0,1) 86%);
 }
 
 #bottomInfoGetText {
@@ -275,7 +326,8 @@ img {
 }
 
 #fiveDollars {
-    background-color: rgb(230, 195, 2);
+    background: rgb(217,182,0);
+    background: linear-gradient(228deg, rgba(217,182,0,1) 36%, rgba(232,222,69,1) 86%);
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -294,7 +346,8 @@ img {
 }
 
 #three {
-    background-color: rgb(230, 195, 2);
+    background: rgb(217,182,0);
+    background: linear-gradient(228deg, rgba(217,182,0,1) 36%, rgba(232,222,69,1) 86%);
     color: white;
 }
 
