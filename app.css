@@ -5,6 +5,7 @@
     font-family: sans-serif;
     font-size: 12px;
     line-height: 1.5;
+    letter-spacing: 0.75px;
 }
 
 @font-face {
@@ -63,12 +64,12 @@ nav {
 
 .dropDown {
     border: 1px solid rgb(207, 207, 207); 
-    padding: 20px 20px 0px 20px; 
+    padding: 20px; 
     position: absolute; 
-    left: 12vw;
+    margin-top: 21px;
     background-color: white; 
-    width: 70vw; 
-    display: flex;
+    width: 500px; 
+    display: none;
     flex-direction: column; 
     justify-content: space-between; 
     z-index: 999;
@@ -96,21 +97,7 @@ nav {
     text-decoration: none;
 }
 
-.tenPercent{
-    display: flex; 
-    justify-content: center; 
-    align-items:center; 
-    background-color: black; 
-    color: white; 
-    height: 40px;
-}
-
-.tenPercent a{
-    color: inherit; 
-    padding-left: 5px;
-}
-
-#shippingInfo a:hover, .tenPercent a:hover{
+#shippingInfo a:hover{
     text-decoration: none;
 }
 
@@ -140,8 +127,11 @@ nav {
     padding-top: 20px;
 }
 
-.centerlink:hover {
+.centerlink:hover{
     border-bottom: 1px solid rgb(121, 121, 121);
+}
+
+.centerlink a:hover {
     opacity: 0.6;
 }
 
@@ -158,8 +148,11 @@ input{
     width: 85%;
     margin: auto;
     color: white;
-    cursor: pointer;
     padding-top: 30px;
+}
+
+#banner img{
+    cursor: pointer;
 }
 
 .bannerText{
@@ -168,6 +161,7 @@ input{
     left: 50vw;
     transform: translate(-50%, -50%);
     z-index: 99;
+    cursor: pointer;
 }
 
 .bannerText p{
@@ -350,6 +344,10 @@ img {
     background: linear-gradient(228deg, rgba(217,182,0,1) 36%, rgba(232,222,69,1) 86%);
     color: white;
 }
+
+/* 
+FOOTER CSS is below 
+*/
 
 #footer{
     background-color:rgb(240, 240, 240);
