@@ -1,4 +1,4 @@
-//navbar javascript
+// navbar javascript
 
 const women = document.querySelector("#women");
 const womenMenu = document.querySelector('#womenMenu');
@@ -16,6 +16,7 @@ if (women) {
     hover(sale,saleMenu);    
 };
 
+// menu on navbar appears as mouse hovers over the 
 function hover(location, menu) {
     location.addEventListener('mouseover', () => {
         menu.setAttribute("style", "display:flex");
@@ -26,10 +27,12 @@ function hover(location, menu) {
 };
 
 
-// men.html javascript
+// men.html, women.html, beauty.html javascript
 const menListingRow = document.querySelector("#menListingRow");
+const womenListingRow = document.querySelector("#womenListingRow");
+const beautyListingRow = document.querySelector("#beautyListingRow");
 
-//container for sales listing
+// container for sales listing
 let menListing = [
     {
         id: "0",
@@ -54,15 +57,82 @@ let menListing = [
         img2: "https://images.unsplash.com/photo-1553143820-6bb68bc34679?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=623&q=80",
         price: "$39.99",
         href: "#"
-    }
+    },
 ];
 
+let womenListing = [
+    {
+        id: "0",
+        name: "Black Striped Pants",
+        img1: "https://images.unsplash.com/photo-1551048632-24e444b48a3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1551048633-8c03f448307f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+        price: "$49.99",
+        href: "#"
+    },
+    {
+        id: "1",
+        name: "Cali Motor Tee",
+        img1: "https://images.unsplash.com/photo-1621694691103-e326ece9252b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1621694691240-b63c0deaba70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+        price: "$29.99",
+        href: "#"
+    },
+    {
+        id: "2",
+        name: "Black Ring Top",
+        img1: "https://images.unsplash.com/photo-1621784562807-cb450c2f5efc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1621784563286-84f7646ef221?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+        price: "$39.99",
+        href: "#"
+    },
+];
+
+let beautyListing = [
+    {
+        id: "0",
+        name: "Soap",
+        img1: "https://images.unsplash.com/photo-1589060040782-234fa4ee0b61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1589060040843-7a31813e6fb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        price: "$9.99",
+        href: "#"
+    },
+    {
+        id: "1",
+        name: "Make up set",
+        img1: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1589825853236-7a9e04b56687?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        price: "$39.99",
+        href: "#"
+    },
+    {
+        id: "2",
+        name: "Tote Bag",
+        img1: "https://images.unsplash.com/photo-1572196284554-4e321b0e7e0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1544816155-12df9643f363?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        price: "$19.99",
+        href: "#"
+    },
+];
+
+//generates the listing for men.html
 if (menListingRow) {
     makeListing(menListing, menListingRow);
     hoverImg(menListing);
 };
 
+//generates the listing for women.html
+if (womenListingRow) {
+    makeListing(womenListing, womenListingRow);
+    hoverImg(womenListing);
+};
 
+//generates the listing for beauty.html
+if (beautyListingRow) {
+    makeListing(beautyListing, beautyListingRow);
+    hoverImg(beautyListing);
+};
+
+// appends the listings onto the designated page
 function makeListing(listing, location) {
     for (content of listing) {
         let newListing = document.createElement("div");
@@ -86,6 +156,7 @@ function makeListing(listing, location) {
     };
 };
 
+// changes listing img src on hover
 function hoverImg(listing) {
     let x = [];
     for (let i = 0; i < listing.length; i++) {
