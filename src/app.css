@@ -484,6 +484,13 @@ women.html, men.html css
     flex-direction: column;
   }
 
+  .itemListing img{
+    cursor: pointer;
+    width: 349px;
+    height: auto;
+    max-height: 524px;
+  }
+
   .browseBy, .shopTitle{
     padding: 10px;
   }
