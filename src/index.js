@@ -31,6 +31,7 @@ function hover(location, menu) {
 const menListingRow = document.querySelector("#menListingRow");
 const womenListingRow = document.querySelector("#womenListingRow");
 const beautyListingRow = document.querySelector("#beautyListingRow");
+const saleListingRow = document.querySelector("#saleListingRow");
 
 // container for sales listing
 let menListing = [
@@ -114,6 +115,33 @@ let beautyListing = [
     },
 ];
 
+let saleListing = [
+    {
+        id: "0",
+        name: "Soap",
+        img1: "https://images.unsplash.com/photo-1589060040782-234fa4ee0b61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1589060040843-7a31813e6fb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        price: "$9.99",
+        href: "#"
+    },
+    {
+        id: "1",
+        name: "Make up set",
+        img1: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1589825853236-7a9e04b56687?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        price: "$39.99",
+        href: "#"
+    },
+    {
+        id: "2",
+        name: "Tote Bag",
+        img1: "https://images.unsplash.com/photo-1572196284554-4e321b0e7e0b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        img2: "https://images.unsplash.com/photo-1544816155-12df9643f363?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        price: "$19.99",
+        href: "#"
+    },
+];
+
 //generates the listing for men.html
 if (menListingRow) {
     makeListing(menListing, menListingRow);
@@ -130,6 +158,12 @@ if (womenListingRow) {
 if (beautyListingRow) {
     makeListing(beautyListing, beautyListingRow);
     hoverImg(beautyListing);
+};
+
+//generates the listing for sale.html
+if (saleListingRow) {
+    makeListing(saleListing, saleListingRow);
+    hoverImg(saleListing);
 };
 
 // appends the listings onto the designated page
@@ -169,3 +203,25 @@ function hoverImg(listing) {
         });
     };
 };
+
+/*
+shipping.html js
+*/
+const collapseBtn = document.querySelectorAll(".collapseBtn");
+const shipCollapse = document.querySelectorAll(".shipCollapse");
+const fas = document.querySelectorAll(".fas");
+
+//toggle for the collapsibles on the bottom of shipping.html
+for (let i = 0; i < collapseBtn.length; i++) {
+    collapseBtn[i].addEventListener('click', () => {
+        if (shipCollapse[i].style.display === "block") {
+            shipCollapse[i].setAttribute("style", "display: none");
+            fas[i].classList.remove("fa-minus");
+            fas[i].classList.add("fa-plus");
+        } else {
+            shipCollapse[i].setAttribute("style", "display: block");
+            fas[i].classList.remove("fa-plus");
+            fas[i].classList.add("fa-minus");
+        }
+    });
+}

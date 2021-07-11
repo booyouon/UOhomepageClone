@@ -469,7 +469,7 @@ home.html css
 }
 
 /* 
-women.html, men.html css 
+women.html, men.html, beauty.html, sale.html css 
 */
 
   .listingRow {
@@ -540,4 +540,97 @@ women.html, men.html css
   #filterBy li{
     padding: 10px 0px;
     font-size: 14px;
+  }
+
+  /*
+  shipping.html
+  */
+
+  #shippingContainer {
+    width: 80%; 
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    padding: 30px 0px;
+  }
+
+  #shippingContainer table {
+    padding-bottom: 20px;
+  }
+
+  #shippingContainer td, #shippingContainer th {
+    border: 1px solid rgb(207, 207, 207);
+    text-align: center;
+    padding: 8px;
+  }
+
+  #shippingContainer td {
+    color: rgb(128, 127, 127);
+  }
+
+  #shippingContainer th {
+      background-color: rgb(221, 221, 221);
+  }
+
+  #shippingContainer h1 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  #shippingContainer p {
+    padding: 10px 0px;
+    color: rgb(128, 127, 127);
+  }
+
+  #shippingCollapsibles {
+    padding: 50px 0px; 
+  }
+
+  .collapseInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    height: auto;
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .collapseBtn{
+    cursor: pointer;
+  }
+
+  .collapseBtn h2 {
+    font-weight: normal;
+    font-size: 15px;
+  }
+
+  .collapseBtn:hover{
+    opacity: 0.6;
+  }
+
+  .shipCollapse {
+    color: rgb(128, 127, 127);
+    padding-top: 15px;
+    display: none;
+  }
+
+  /*
+  bdg.html
+  */
+
+  #bdgPageContainer {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+      padding: 20px 0px;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #bdgPageContainer h1 {
+      font-weight: normal;
+      padding: 20px 0px;
   }
