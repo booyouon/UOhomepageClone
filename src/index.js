@@ -205,7 +205,7 @@ function hoverImg(listing) {
 };
 
 /*
-shipping.html js
+shipping.html, cart.html js
 */
 const collapseBtn = document.querySelectorAll(".collapseBtn");
 const shipCollapse = document.querySelectorAll(".shipCollapse");

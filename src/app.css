@@ -634,3 +634,12 @@ women.html, men.html, beauty.html, sale.html css
       font-weight: normal;
       padding: 20px 0px;
   }
+
+  /*
+  cart.html
+  */
+
+  #cartContainer h2 {
+    font-weight: normal;
+    font-size: 16px;
+  }
