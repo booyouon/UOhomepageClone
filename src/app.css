@@ -641,6 +641,14 @@ women.html, men.html, beauty.html, sale.html css
   cart.html
   */
 
+  #cartContainer {
+    display: flex; 
+    flex-direction: row; 
+    width: 80%; 
+    margin: auto; 
+    padding: 20px 0px
+  }
+
   #cartContainer h2 {
     font-weight: normal;
     font-size: 16px;
@@ -652,4 +660,44 @@ women.html, men.html, beauty.html, sale.html css
 
   #cartContainer a:hover {
     text-decoration: none;
+  }
+
+  #shoppingBagContainer {
+    display: flex; 
+    flex-direction: column; 
+    width: 75%; 
+    padding-right: 50px;
+  }
+
+  .cartHead {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+
+  #cartTable {
+    display: none;
+  }
+
+  #cartEmpty {
+    padding: 20px 0px 100px 0px;
+  }
+
+  #sflEmpty {
+    border: 1px solid rgb(207, 207, 207); 
+    padding: 20px;
+  }
+
+  .checkOutButtons{
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .checkOutButtons span{
+    font-size: 18px;
   }

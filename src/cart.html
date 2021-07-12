@@ -12,15 +12,14 @@
     <title>cart</title>
 </head>
 <body>
-    <div id="cartContainer" style="display: flex; flex-direction: row; width: 80%; margin: auto; padding: 20px 0px">
-        <div id="shoppingBagContainer" style="display: flex; flex-direction: column; width: 75%; padding-right: 50px;">
-            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+    <div id="cartContainer">
+        <div id="shoppingBagContainer">
+            <div class="cartHead">
                 <h2>Shopping Bag</h2>
                 <a href="">Delivery Options</a>
             </div>
-            <br>
             <hr>
-            <table id="cartTable" style="display: none;">
+            <table id="cartTable">
                 <tr>
                     <th></th>
                     <th>Item</th>
@@ -29,31 +28,47 @@
                     <th>Total Price</th>
                 </tr>
             </table>
-            <p id="cartEmpty" style="padding: 20px 0px 100px 0px;">Your bag is currently empty. <a href="home.html">Continue Shopping</a></p>
+            <p id="cartEmpty">Your bag is currently empty. <a href="home.html">Continue Shopping</a></p>
             <div id="sflContainer" style="padding: 30px 0px;">
                 <div id="sflHead" style="padding-bottom: 10px;"> 
                     <h2>Saved For Later</h2>
                 </div>
                 <div id="saveForLater">
-                    <p id="sflEmpty" style="border: 1px solid rgb(207, 207, 207); padding: 20px;">Your Saved for Later is currently empty.</p>
+                    <p id="sflEmpty">Your Saved for Later is currently empty.</p>
                 </div>
             </div>
         </div>
         <div id="orderSummaryContainer" style="display: flex; flex-direction: column; width: 25%;">
-            <div id="orderSummaryHead" style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div class="cartHead">
                 <h2>Order Summary</h2>
                 <a href="tel:8002822200">800.282.2200</a>
             </div>
-            <div id="orderSummary" style="border: 1px solid rgb(207, 207, 207);">
-                <div class="collapseInfo" style="border-bottom: none; border-top: 1px solid rgb(207, 207, 207);">
+            <div id="orderSummary" style="border: 1px solid rgb(207, 207, 207); padding: 20px 20px 0px 20px;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td>Shipping</td>
+                        <td style="text-align: right;">TBD</td>
+                    </tr>
+                    <tr>
+                        <td>Estimated Tax</td>
+                        <td style="text-align: right;">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;">Total</td>
+                        <td style="text-align: right; font-weight: bold;">$0.00</td>
+                    </tr>
+                </table>
+                <button class="checkOutButtons" style="background-color: gray; border: none;">Proceed to Checkout</button> <br>
+                <button class="checkOutButtons" style="background-color: white; border: 1px solid black;"><i><span style="color:blue">Pay</span><span style="color: lightskyblue;">Pal</span></i></button>               
+                <div class="collapseInfo" style="border-bottom: none; border-top: 1px solid rgb(207, 207, 207); margin-top: 20px;">
                     <div class="collapseBtn">
-                        <h2>promo code</h2>
+                        <h2 style="font-size: 14px;">promo code</h2>
                         <i class="fas fa-plus"></i>
                     </div>                 
                     <div class="shipCollapse">
-                        <form>
+                        <form style="display: flex; flex-wrap: nowrap;">
                             <input id="promoCode" class="form-control me-2" type="text" required="required" style="width: 14vw;">
-                            <input id="promoCode" type="submit" value="Apply" style="margin-left: 10px; height: 40px; width: 5vw; background-color: white; border: 1px solid;">
+                            <input id="promoCode" type="submit" value="Apply" style="margin-left: 10px; height: 40px; width: 4vw; background-color: white; border: 1px solid;">
                         </form>
                     </div>
                 </div>
