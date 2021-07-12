@@ -16,7 +16,7 @@
         <div id="shoppingBagContainer" style="display: flex; flex-direction: column; width: 75%; padding-right: 50px;">
             <div style="display: flex; flex-direction: row; justify-content: space-between;">
                 <h2>Shopping Bag</h2>
-                <p>Delivery Options</p>
+                <a href="">Delivery Options</a>
             </div>
             <br>
             <hr>
@@ -44,14 +44,17 @@
                 <h2>Order Summary</h2>
                 <a href="tel:8002822200">800.282.2200</a>
             </div>
-            <div id="orderSummary">
-                <div class="collapseInfo">
-                    <div class="collapseBtn" style="display: flex; justify-content: space-between;">
+            <div id="orderSummary" style="border: 1px solid rgb(207, 207, 207);">
+                <div class="collapseInfo" style="border-bottom: none; border-top: 1px solid rgb(207, 207, 207);">
+                    <div class="collapseBtn">
                         <h2>promo code</h2>
                         <i class="fas fa-plus"></i>
                     </div>                 
                     <div class="shipCollapse">
-                        poop
+                        <form>
+                            <input id="promoCode" class="form-control me-2" type="text" required="required" style="width: 14vw;">
+                            <input id="promoCode" type="submit" value="Apply" style="margin-left: 10px; height: 40px; width: 5vw; background-color: white; border: 1px solid;">
+                        </form>
                     </div>
                 </div>
             </div>
