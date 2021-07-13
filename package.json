@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/booyouon/UOhomepageClone#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
   }
 }
