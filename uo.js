@@ -21,6 +21,27 @@ app.get('/', (req, res) => {
 app.get('/women', (req, res) => {
     res.render('women');
 })
+app.get('/men', (req, res) => {
+    res.render('men');
+})
+app.get('/beauty', (req, res) => {
+    res.render('beauty');
+})
+app.get('/cart', (req, res) => {
+    res.render('cart');
+})
+app.get('/sale', (req, res) => {
+    res.render('sale');
+})
+app.get('/rewards', (req, res) => {
+    res.render('rewards');
+})
+app.get('/shipping', (req, res) => {
+    res.render('shipping');
+})
+app.get('/bdg', (req, res) => {
+    res.render('bdg');
+})
 
 //message to tell node which port to look at when uo.js is started
 app.listen(3000, () => {
