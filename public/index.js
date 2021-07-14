@@ -26,6 +26,50 @@ function hover(location, menu) {
     });
 };
 
+//login
+const exit = document.querySelector(".closeBtn");
+const popUp = document.querySelector(".popUp");
+const loginHead = document.querySelector("#loginHead");
+const signUpBtn = document.querySelector("#signUpBtn");
+const signIn = document.querySelector("#signIn");
+const loginFooter = document.querySelector("#loginFooter");
+const loginP = document.querySelector("#loginP");
+const forgot = document.querySelector("#forgot");
+const createInfo = document.querySelector("#createInfo");
+const stylePref = document.querySelector("#styleContainer");
+const signInBtn = document.querySelector("#signInBtn");
+
+exit.addEventListener('click', () => {
+    popUp.setAttribute("style", "display: none");
+})
+
+signInBtn.addEventListener('click', () => {
+    popUp.setAttribute("style", "display: block");
+})
+
+signUpBtn.addEventListener('click', () => {
+  if (stylePref.style.display === "block") {
+    loginHead.textContent = "Sign In";
+    signUpBtn.textContent = "Create an Account";
+    loginFooter.textContent = "Sign Up";
+    signIn.value = "Sign In";
+    loginP.setAttribute("style", "display: block");
+    forgot.setAttribute("style", "display: block");
+    createInfo.setAttribute("style", "display: none");
+    stylePref.setAttribute("style", "display: none"); 
+  } else {
+    loginHead.textContent = "Create an Account";
+    signUpBtn.textContent = "Sign In";
+    loginFooter.textContent = "Already Have an Account?";
+    signIn.value = "Create an Account";
+    loginP.setAttribute("style", "display: none");
+    forgot.setAttribute("style", "display: none");
+    createInfo.setAttribute("style", "display: block");
+    stylePref.setAttribute("style", "display: block"); 
+  }
+})
+
+
 
 // men.html, women.html, beauty.html javascript
 const menListingRow = document.querySelector("#menListingRow");
@@ -210,7 +254,7 @@ shipping.html, cart.html js
 
 const collapseBtn = document.querySelectorAll(".collapseBtn");
 const shipCollapse = document.querySelectorAll(".shipCollapse");
-const fas = document.querySelectorAll(".fas");
+const fas = document.querySelectorAll(".fa-plus");
 
 //toggle for the collapsibles on the bottom of shipping.html
 if (collapseBtn) {
