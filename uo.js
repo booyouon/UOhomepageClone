@@ -42,6 +42,9 @@ app.get('/shipping', (req, res) => {
 app.get('/bdg', (req, res) => {
     res.render('bdg');
 })
+app.get('/product', (req, res) => {
+    res.render('product');
+})
 
 //message to tell node which port to look at when uo.js is started
 app.listen(3000, () => {

@@ -1,0 +1,97 @@
+<%- include('partials/header')  %> 
+<body>
+    <%- include('partials/nav')  %> 
+    <div id="productContainer">
+        <div id="clickableImages">
+
+        </div>
+
+        <div id="focusedImage">
+
+        </div>
+
+        <div id="productInfo">
+            <h1 id="productName">
+            <!--Autofilled by js-->
+            </h1>
+            <h1 id="productPrice">
+            <!--Autofilled by js-->
+            </h1>
+
+            <p>
+                <strong>Color:</strong>
+                <span id="productColor"><!--Autofilled by js--></span>
+            </p>
+
+            <label for="productQty"><strong>Qty*</strong></label>
+            <br>
+            <select name="productQty" id="productQty">
+                <% for(let i = 0; i < 10; i++) { %>
+                    <option value="<%= i + 1 %>"><%= i + 1 %></option>
+                <% } %>
+            </select>
+            <p><strong>Free Shipping over $50</strong></p>
+            <button>Add to Bag</button>
+            <div class="collapseInfo">
+                <div class="collapseBtn">
+                    <h2>Details</h2>
+                    <i class="fas fa-plus"></i>
+                </div>                 
+                <div class="shipCollapse">
+                    <p>
+                        No matter how many Unlimited Furniture Delivery items you place in a single order, your items will be delivered via truck for one $99.95 flat-rate fee. This includes complementary placement of items inside your residence in your immediate entryway. Please be sure to include all pertinent shipping information at Checkout like your apartment, floor or building number. <br><br>
+                        Some furniture items take 2 to 4 weeks to arrive. Made-to-order items may take additional time. More specific information regarding a furniture item's delivery time frame and method can be found on the item's product detail page. <br><br>
+                        Unlimited Furniture Delivery items are unable to ship to US territories, Alaska, Hawaii, islands within the continental US, PO boxes, APO/FPO addresses and locations outside of the US. Overnight and express delivery options are also unavailable.
+                    </p>
+                </div>
+            </div>
+            <div class="collapseInfo">
+                <div class="collapseBtn">
+                    <h2>Shipping + Returns</h2>
+                    <i class="fas fa-plus"></i>
+                </div>                 
+                <div class="shipCollapse">
+                    <h1>Shipping</h1>
+                    <table>
+                        <tr>
+                            <th>Method</th>
+                            <th>Shipping Time</th>
+                            <th>Cost</th>
+                        </tr>
+                        <tr>
+                            <td>Standard</td>
+                            <td>Arrives in 5-8 business days</td>
+                            <td>
+                                Orders up to $49.99: $4.95<br>
+                                Orders $50 and over: FREE
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Express</td>
+                            <td>Arrives in 2-3 business days</td>
+                            <td>$14.95</td>
+                        </tr>
+                        <tr>
+                            <td>Rush</td>
+                            <td>Arrives in 1-2 business days</td>
+                            <td>$21.95</td>
+                        </tr>
+                        <tr>
+                            <td>Truck</td>
+                            <td>Arrives in 2-4 weeks once shipped</td>
+                            <td>Cost may vary</td>
+                        </tr>
+                    </table>
+                    <p>
+                        These shipping rates are not applicable for orders shipped outside of the US. Some oversized items may require an additional shipping charge. Free Shipping applies only to merchandise; taxes and Gift Cards do not count toward the Free Shipping total. Rush Shipping may not be available for all orders depending on fulfillment location.Shipping outside of the US? Visit our International Shipping + Returns page.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer')  %> 
+    <script src="index.js"></script>
+</body>
+</html>
