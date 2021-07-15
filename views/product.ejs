@@ -3,28 +3,32 @@
     <%- include('partials/nav')  %> 
     <div id="productContainer">
         <div id="clickableImages">
-
+            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="smallProductImg">
+            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="smallProductImg">
+            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="smallProductImg">
+            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="smallProductImg">
         </div>
 
         <div id="focusedImage">
-
+            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="">
         </div>
 
         <div id="productInfo">
             <h1 id="productName">
+            UO Mallory Cowl Neck Slip Dress
             <!--Autofilled by js-->
             </h1>
             <h1 id="productPrice">
+            $49.00
             <!--Autofilled by js-->
             </h1>
 
             <p>
                 <strong>Color:</strong>
-                <span id="productColor"><!--Autofilled by js--></span>
+                <span id="productColor">Black<!--Autofilled by js--></span>
             </p>
 
             <label for="productQty"><strong>Qty*</strong></label>
-            <br>
             <select name="productQty" id="productQty">
                 <% for(let i = 0; i < 10; i++) { %>
                     <option value="<%= i + 1 %>"><%= i + 1 %></option>

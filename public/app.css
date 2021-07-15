@@ -8,6 +8,10 @@
     letter-spacing: 0.75px;
 }
 
+select, option {
+  font-size: 15px;
+}
+
 @font-face {
     font-family: League;
     src: url(urban-outfitters-font/League\ Gothic.otf);
@@ -891,4 +895,80 @@ women.html, men.html, beauty.html, sale.html css
     border: 1px solid black;
     width: 100%;
     height: 45px;
+  }
+
+  /*
+  product page
+  */ 
+
+  #productContainer {
+    display: flex; 
+    flex-direction: row; 
+    width: 80%; 
+    margin: auto; 
+    padding-top: 60px; 
+    padding-bottom: 40px;
+  }
+
+  #clickableImages {
+    display: flex; 
+    flex-direction: column; 
+    margin-right: 25px;
+  }
+
+  #clickableImages img {
+    margin-bottom: 15px;
+    width: 6vw; 
+    height: auto;
+    cursor: pointer;
+  }
+
+  #clickableImages img:hover{
+    border: 1px solid black;
+  }
+
+  #focusedImage {
+    margin-right: 70px;
+    cursor: crosshair;
+  }
+
+  #focusedImage img {
+    width: 35vw; 
+    height: auto;
+  }
+
+  #productInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #productInfo h1 {
+    font-size: 22px;
+    font-weight: normal;
+  }
+
+  #productInfo p, #productInfo label, #productInfo select, #productInfo button {
+    margin: 10px 0px;
+  } 
+
+  #productInfo select {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+
+  #productInfo button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    width: 25vw;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  #productInfo button:hover {
+    opacity: 0.6;
   }
