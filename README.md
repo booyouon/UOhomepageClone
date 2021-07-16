@@ -17,4 +17,4 @@ NPM, github
 
 ```node
 # to start:
-nodemon uo.js 
+npm start
