@@ -524,6 +524,15 @@ home.html css
     padding: 8px;
 }
 
+.seeMore {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.seeMore:hover{
+  text-decoration: none;
+}
+
 /* 
 women.html, men.html, beauty.html, sale.html css 
 */
