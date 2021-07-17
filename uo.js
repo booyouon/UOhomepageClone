@@ -42,8 +42,38 @@ app.get('/rewards', (req, res) => {
 app.get('/shipping', (req, res) => {
     res.render('shipping');
 })
+app.get('/accessibility', (req, res) => {
+    res.render('accessibility');
+})
 app.get('/bdg', (req, res) => {
     res.render('bdg');
+})
+app.get('/afterPay', (req, res) => {
+    res.render('afterPay');
+})
+app.get('/contact', (req, res) => {
+    res.render('contact');
+})
+app.get('/faq', (req, res) => {
+    res.render('faq');
+})
+app.get('/giftCard', (req, res) => {
+    res.render('giftCard');
+})
+app.get('/orderPayment', (req, res) => {
+    res.render('orderPayment');
+})
+app.get('/privacy', (req, res) => {
+    res.render('privacy');
+})
+app.get('/returnExchanges', (req, res) => {
+    res.render('returnExchanges');
+})
+app.get('/terms', (req, res) => {
+    res.render('terms');
+})
+app.get('/UOMRKT', (req, res) => {
+    res.render('UOMRKT');
 })
 app.get('/:product', (req, res) => {
     const { product } = req.params;

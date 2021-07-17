@@ -982,3 +982,55 @@ women.html, men.html, beauty.html, sale.html css
   #productInfo button:hover {
     opacity: 0.6;
   }
+
+  /*
+  footer linked pages
+  */
+  .helpContainers {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    padding: 60px 0px;
+  }
+  
+  .helpContainers h1 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(207,207,207);
+    font-size: 26px;
+  }
+  
+  .helpContainers h2 {
+    font-weight: normal;
+    font-size: 19px;
+  }
+  
+  .infoDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .infoDiv a:hover{
+    opacity:0.6;
+  }
+  
+  .returnInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
+  
+  #afterPayInfo {
+    background-color: rgb(237,237,237);
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 10px 20px;
+    width: 20vw;
+    height: auto;
+    margin: 10px;
+  }
+  #afterPayInfo h2{
+    text-align: center;
+  }
