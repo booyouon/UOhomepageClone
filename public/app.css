@@ -949,6 +949,7 @@ women.html, men.html, beauty.html, sale.html css
   #productInfo {
     display: flex;
     flex-direction: column;
+    width: 25vw;
   }
 
   #productInfo h1 {

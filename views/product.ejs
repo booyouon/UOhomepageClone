@@ -1,33 +1,41 @@
 <%- include('partials/header')  %>
-<title><% name %>></title>
+<title><%= name %></title>
 </head> 
 <body>
     <%- include('partials/nav')  %> 
     <div id="productContainer">
         <div id="clickableImages">
-            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="smallProductImg">
-            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="smallProductImg">
-            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="smallProductImg">
-            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="smallProductImg">
+            <img src="<%= img1 %>" alt="smallProductImg">
+            <img src="<%= img2 %>" alt="smallProductImg">
         </div>
 
         <div id="focusedImage">
-            <img src="https://images.unsplash.com/photo-1485043433441-db091a258e5a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" alt="">
+            <img src="<%= img1 %>" alt="<%= name %>">
         </div>
 
         <div id="productInfo">
             <h1 id="productName">
-            UO Mallory Cowl Neck Slip Dress
-            <!--Autofilled by js-->
+                <%= name %>
             </h1>
-            <h1 id="productPrice">
-            $49.00
-            <!--Autofilled by js-->
-            </h1>
+            <div id="priceContainer" style="display: flex; flex-direction: row;">
+                <% if (sale){ %>
+                    <h1 id="productPrice" style="text-decoration: line-through;">
+                        $<%= price %>
+                    </h1> 
+                    <h1 id="productPrice" style="color: red;">
+                        $<%= sale %>
+                    </h1>
+                <% } else { %> 
+                    <h1 id="productPrice">
+                        $<%= price %>
+                    </h1>
+                <% } %>
+
+            </div>
 
             <p>
                 <strong>Color:</strong>
-                <span id="productColor">Black<!--Autofilled by js--></span>
+                <span id="productColor"><%= color %></span>
             </p>
 
             <label for="productQty"><strong>Qty*</strong></label>
@@ -45,9 +53,7 @@
                 </div>                 
                 <div class="shipCollapse">
                     <p>
-                        No matter how many Unlimited Furniture Delivery items you place in a single order, your items will be delivered via truck for one $99.95 flat-rate fee. This includes complementary placement of items inside your residence in your immediate entryway. Please be sure to include all pertinent shipping information at Checkout like your apartment, floor or building number. <br><br>
-                        Some furniture items take 2 to 4 weeks to arrive. Made-to-order items may take additional time. More specific information regarding a furniture item's delivery time frame and method can be found on the item's product detail page. <br><br>
-                        Unlimited Furniture Delivery items are unable to ship to US territories, Alaska, Hawaii, islands within the continental US, PO boxes, APO/FPO addresses and locations outside of the US. Overnight and express delivery options are also unavailable.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus minima molestiae doloremque totam sunt. In obcaecati nam animi fugiat? Aperiam laboriosam atque, velit ad ipsum amet magnam recusandae quisquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique consectetur, vitae itaque laudantium dicta molestias reiciendis ab optio culpa recusandae pariatur commodi non provident aspernatur. Quasi, maxime? Blanditiis, non corporis.
                     </p>
                 </div>
             </div>

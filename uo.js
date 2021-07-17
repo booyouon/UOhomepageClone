@@ -1,8 +1,11 @@
+
 //express configuration to run the page
 
 const express = require('express');
 const app = express();
 const path = require('path');
+const shopData = require('./data.json');
+
 
 //serves the app.css,index.js, UO font, and images files for the files located in the views directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -42,11 +45,17 @@ app.get('/shipping', (req, res) => {
 app.get('/bdg', (req, res) => {
     res.render('bdg');
 })
-app.get('/product', (req, res) => {
-    res.render('product');
+app.get('/:product', (req, res) => {
+    const { product } = req.params;
+    const data = shopData[product];
+    res.render('product', { ...data });
 })
 
 //message to tell node which port to look at when uo.js is started
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000");
 })
+
+
+
+
