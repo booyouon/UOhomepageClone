@@ -1094,3 +1094,30 @@ women.html, men.html, beauty.html, sale.html css
   #afterPayInfo h2{
     text-align: center;
   }
+
+  /*
+  email popup
+  */
+
+  #getOurEmailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    width: 25vw;
+    padding: 50px;
+  }
+  
+  #getOurEmailsContainer p{
+    font-size: 12px;
+    text-align: center;
+    color: rgb(107,107,107)
+  }
+  
+  #getOurEmailsContainer form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  

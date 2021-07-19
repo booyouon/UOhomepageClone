@@ -1,0 +1,4 @@
+- Functional cart
+- Functional login with user authorization
+- cart that can be used both logged in and off
+- store locator
