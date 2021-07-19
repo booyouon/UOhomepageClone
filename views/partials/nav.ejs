@@ -18,7 +18,7 @@
         </li>
         ---------------------------------->
         <li>
-            <a id="signInBtn"><i class="far fa-user-circle"></i> Sign In</a>
+            <a class="signInBtn"><i class="far fa-user-circle"></i> Sign In</a>
         </li>
     </ul>
 </nav>
@@ -66,14 +66,16 @@
 </nav>
 
 <div id="burgerOptions">
-    <a href="" class="bdgBurger">Sign In</a>
-    <a href="" class="navBurger">Women's</a>
-    <a href="" class="navBurger">Men's</a>
-    <a href="" class="navBurger">Beauty</a>
-    <a href="" class="navBurger">Sale</a>
-    <a href="" class="bdgBurger" style="padding-top: 5px;"><img src="img/BDG-Logo-lines__3_.png" alt="BDG-Logo-lines__3_"></a>
-    <a href="" class="bdgBurger">Shipping Details</a>
-    <a href="" class="bdgBurger">UO Rewards</a>
+    <a class="signInBtn" style="background-color: rgb(235, 235, 235);"><i class="far fa-user-circle"></i> Sign In</a>
+    <a href="/women" class="navBurger">Women's</a>
+    <a href="/men" class="navBurger">Men's</a>
+    <a href="/beauty" class="navBurger">Beauty</a>
+    <a href="/sale" class="navBurger" style="color: red;">Sale</a>
+    <a href="/bdg" class="bdgBurger" style="padding-top: 10px;"><img src="img/BDG-Logo-lines__3_.png" alt="BDG-Logo-lines__3_"></a>
+    <a href="/shipping" class="bdgBurger">Shipping Details</a>
+    <a href="/rewards" class="bdgBurger"><i class="fas fa-atom"></i> UO Rewards</a>
 </div>
+
+<div id="darkBG"></div>
 
 <%- include('login')  %> 

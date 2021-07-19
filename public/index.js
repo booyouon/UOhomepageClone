@@ -1,24 +1,50 @@
+const hamburger = document.querySelector("#burgerMenu");
+const hamMenu = document.querySelector("#burgerOptions");
+const darkBG = document.querySelector("#darkBG");
+
+hamburger.addEventListener('click', () => {
+    hamMenu.style.display = "flex";
+    darkBG.style.display = "block";
+})
+
+darkBG.addEventListener('click', () => {
+    hamMenu.style.display = "none";
+    darkBG.style.display = "none";
+})
+
 //login
 const exit = document.querySelector(".closeBtn");
 const popUp = document.querySelector(".popUp");
 const loginHead = document.querySelector("#loginHead");
 const signUpBtn = document.querySelector("#signUpBtn");
-const signIn = document.querySelector("#signIn");
+const signIn = document.querySelector(".signIn");
 const loginFooter = document.querySelector("#loginFooter");
 const loginP = document.querySelector("#loginP");
 const forgot = document.querySelector("#forgot");
 const createInfo = document.querySelector("#createInfo");
 const stylePref = document.querySelector("#styleContainer");
-const signInBtn = document.querySelector("#signInBtn");
+const signInBtn = document.querySelectorAll(".signInBtn");
 const loginPop = document.querySelectorAll(".loginPop");
 
 exit.addEventListener('click', () => {
     popUp.setAttribute("style", "display: none");
+    darkBG.style.display = "none";
 })
 
-signInBtn.addEventListener('click', () => {
-    popUp.setAttribute("style", "display: block");
+darkBG.addEventListener('click', () => {
+    popUp.setAttribute("style", "display: none");
 })
+
+for (btn of signInBtn) {
+    btn.addEventListener('click', () => {
+        popUp.setAttribute("style", "display: block");
+        darkBG.style.display = "block";
+        if (hamMenu.style.display === "flex") {
+            hamMenu.style.display = "none";
+        }
+    })
+}
+
 
 if(loginPop) {
     for (let i = 0; i < loginPop.length; i++) {
