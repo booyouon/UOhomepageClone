@@ -9,15 +9,18 @@ const shopData = require('./data.json');
 
 //serves the app.css,index.js, UO font, and images files for the files located in the views directory
 app.use(express.static(path.join(__dirname, 'public')));
+
 //serves fontawesome 
 app.use(express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free'))
 
+//sets up urlencoded to read req.body
+app.use(express.urlencoded({extended:true}));
 
 //ejs set up
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
 
-//pathways
+//pathways .get
 app.get('/', (req, res) => {
     res.render('home');
 })
@@ -79,6 +82,11 @@ app.get('/:product', (req, res) => {
     const { product } = req.params;
     const data = shopData[product];
     res.render('product', { ...data });
+})
+
+//post requests
+app.post('/cart' ,(req,res) => {
+    console.log(req.body);
 })
 
 //message to tell node which port to look at when uo.js is started

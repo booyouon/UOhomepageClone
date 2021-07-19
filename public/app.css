@@ -109,6 +109,19 @@ nav {
     list-style: none;
 }
 
+#burgerMenu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#burgerMenu div {
+  background-color: rgb(138, 138, 138);
+  width: 25px;
+  height: 4px;
+  margin: 2px;
+}
+
 #shippingInfo, #shippingInfo a{
     color: rgb(121, 121, 121);
 }
@@ -1031,6 +1044,7 @@ women.html, men.html, beauty.html, sale.html css
     height: auto;
     margin: 10px;
   }
+
   #afterPayInfo h2{
     text-align: center;
   }

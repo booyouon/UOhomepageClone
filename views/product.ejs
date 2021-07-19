@@ -38,14 +38,17 @@
                 <span id="productColor"><%= color %></span>
             </p>
 
-            <label for="productQty"><strong>Qty*</strong></label>
-            <select name="productQty" id="productQty">
-                <% for(let i = 0; i < 10; i++) { %>
-                    <option value="<%= i + 1 %>"><%= i + 1 %></option>
-                <% } %>
-            </select>
+            <form action="/cart" method="POST">
+                <label for="productQty"><strong>Qty*</strong></label>
+                <select name="productQty" id="productQty">
+                    <% for(let i = 0; i < 10; i++) { %>
+                        <option value="<%= i + 1 %>"><%= i + 1 %></option>
+                    <% } %>
+                </select>
+                <button type="submit">Add to Bag</button>
+            </form>
+            
             <p><strong>Free Shipping over $50</strong></p>
-            <button>Add to Bag</button>
             <div class="collapseInfo">
                 <div class="collapseBtn">
                     <h2>Details</h2>
