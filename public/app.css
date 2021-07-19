@@ -8,6 +8,13 @@
     letter-spacing: 0.75px;
 }
 
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
 select, option {
   font-size: 15px;
 }
@@ -42,7 +49,11 @@ nav {
 }
 
 #UOnav {
-    border-bottom: 1px solid rgb(207, 207, 207);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  background-color: white;
+  z-index: 99999;
 }
 
 #UOlogo a{
@@ -110,9 +121,21 @@ nav {
 }
 
 #burgerMenu {
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1030px) {
+  #burgerMenu {
+    display: flex;
+  }
+  .navLinks, #searchContainer, #bdgNav {
+    display: none;
+  }
+  #UOlogo a {
+    font-size: 4vw;
+  }
 }
 
 #burgerMenu div {
@@ -122,8 +145,43 @@ nav {
   margin: 2px;
 }
 
+#burgerOptions {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  right:0;
+  top:0;
+  background-color: white;
+  width: 270px;
+  height: 100%;
+  z-index: 99999;
+}
+
+#burgerOptions a {
+  color: #000000;
+  text-decoration: none;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgb(207, 207, 207);
+  padding-top: 15px;
+  padding-left: 15px;
+}
+
+.navBurger {
+  font-size: large;
+}
+
+#burgerOptions a:hover{
+  text-decoration: underline;
+}
+
+.bdgBurger {
+  font-size: small;
+  background-color: rgb(235, 235, 235);
+}
+
 #shippingInfo, #shippingInfo a{
-    color: rgb(121, 121, 121);
+  color: rgb(121, 121, 121);
 }
 
 #shippingInfo{
