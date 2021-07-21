@@ -19,6 +19,10 @@ select, option {
   font-size: 15px;
 }
 
+a{
+  cursor: pointer;
+}
+
 @font-face {
     font-family: League;
     src: url(urban-outfitters-font/League\ Gothic.otf);
@@ -328,9 +332,10 @@ img {
 }
 
  h1 {
-    font-size: 30px;
-    padding: 5px;
-    top: 10%;
+  align-content: center;
+  font-size: 30px;
+  padding: 5px;
+  top: 10%;
 }
 
 #joinUOtext, #getText{
@@ -1099,7 +1104,17 @@ women.html, men.html, beauty.html, sale.html css
   email popup
   */
 
+  #popUpEmail{
+    z-index: 9999;    
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-49%,-49%);
+  }
+
   #getOurEmailsContainer {
+    background-color: white;
     box-sizing: unset;
     display: flex;
     flex-direction: column;
@@ -1119,6 +1134,21 @@ women.html, men.html, beauty.html, sale.html css
   #getOurEmailsContainer form {
     display: flex;
     flex-direction: column;
+  }
+
+  #getOurEmailsContainer button{
+    align-self: flex-end;
+    font-size: large;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: white;
+    cursor: pointer;
+  }
+
+  #getOurEmailsContainer button:hover{
+    opacity: 0.6;
   }
 
   .emailBtn {

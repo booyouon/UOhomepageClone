@@ -27,12 +27,12 @@ const signInBtn = document.querySelectorAll(".signInBtn");
 const loginPop = document.querySelectorAll(".loginPop");
 
 exit.addEventListener('click', () => {
-    popUp.setAttribute("style", "display: none");
+    popUp.style.display = "none";
     darkBG.style.display = "none";
 })
 
 darkBG.addEventListener('click', () => {
-    popUp.setAttribute("style", "display: none");
+    popUp.style.display = "none";
 })
 
 for (btn of signInBtn) {
@@ -76,6 +76,25 @@ signUpBtn.addEventListener('click', () => {
   }
 })
 
+//email popup
+const emailPopUp = document.querySelector("#popUpEmail");
+const emailClose = document.querySelector("#getOurEmailsContainer button");
+const getEmail = document.querySelector("#footerGetEmail");
+
+emailPopUp.addEventListener("click" , () => {
+    emailPopUp.style.display = "none";
+    darkBG.style.display = "none";
+})
+
+getEmail.addEventListener("click" , () => {
+    emailPopUp.style.display = "block";
+    darkBG.style.display = "block";
+})
+
+darkBG.addEventListener('click', () => {
+    emailPopUp.style.display = "none";
+    darkBG.style.display = "none";
+})
 
 
 // men.html, women.html, beauty.html javascript
