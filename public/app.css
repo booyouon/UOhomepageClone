@@ -1100,6 +1100,7 @@ women.html, men.html, beauty.html, sale.html css
   */
 
   #getOurEmailsContainer {
+    box-sizing: unset;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1118,6 +1119,20 @@ women.html, men.html, beauty.html, sale.html css
   #getOurEmailsContainer form {
     display: flex;
     flex-direction: column;
+  }
+
+  .emailBtn {
+    height: 40px; 
+    background-color: black; 
+    color: white; 
+    border: none; 
+    font-size: 18px; 
+    margin-top: 15px; 
+    cursor: pointer;
+  }
+
+  .emailBtn:hover {
+    opacity: 0.6;
   }
   
   
