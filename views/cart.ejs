@@ -10,6 +10,13 @@
                 <a href="">Delivery Options</a>
             </div>
             <hr>
+
+            <ul>
+                <% for(let product of products) { %>
+                    <li><%= product.name %></li>
+                <% }%>
+            </ul>
+
             <table id="cartTable">
                 <tr>
                     <th></th>

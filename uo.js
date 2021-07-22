@@ -1,4 +1,7 @@
 
+//change this value to choose which port to run on
+const port = 3000;
+
 //express configuration to run the page
 
 const express = require('express');
@@ -6,6 +9,18 @@ const app = express();
 const path = require('path');
 const shopData = require('./data.json');
 
+//mongoose
+const mongoose = require('mongoose');
+const Product= require('./models/product');
+
+mongoose.connect('mongodb://localhost:27017/uoCart', {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => {
+        console.log("mongo connection open");
+    })
+    .catch(err => {
+        console.log("mongo error");
+        console.log(err);
+    }) 
 
 //serves the app.css,index.js, UO font, and images files for the files located in the views directory
 app.use(express.static(path.join(__dirname, 'public')));
@@ -20,6 +35,19 @@ app.use(express.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
 
+//post requests
+app.post('/cart' , async (req,res) => {
+    const newProduct = await new Product(req.body);
+    await newProduct.save();
+    console.log(newProduct);
+    res.redirect('/cart');
+})
+
+app.get('/cart', async (req, res) => {
+    const products = await Product.find({});
+    res.render('cart', { products });
+})
+
 //pathways .get
 app.get('/', (req, res) => {
     res.render('home');
@@ -33,9 +61,7 @@ app.get('/men', (req, res) => {
 app.get('/beauty', (req, res) => {
     res.render('beauty');
 })
-app.get('/cart', (req, res) => {
-    res.render('cart');
-})
+
 app.get('/sale', (req, res) => {
     res.render('sale');
 })
@@ -84,14 +110,9 @@ app.get('/:product', (req, res) => {
     res.render('product', { ...data });
 })
 
-//post requests
-app.post('/cart' ,(req,res) => {
-    console.log(req.body);
-})
-
 //message to tell node which port to look at when uo.js is started
-app.listen(3000, () => {
-    console.log("LISTENING ON PORT 3000");
+app.listen(port, () => {
+    console.log(`LISTENING ON PORT ${port}`);
 })
 
 
