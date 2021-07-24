@@ -40,6 +40,13 @@
 
             <form action="/cart" method="POST">
                 <input type="hidden" name="name" value="<%= name %>">
+                <input type="hidden" name="img" value="<%= img1 %>">
+                <% if (sale){ %>                    
+                    <input type="hidden" name="price" value="<%= sale %>">
+                <% } else { %> 
+                    <input type="hidden" name="price" value="<%= price %>">
+                <% } %>                
+                <input type="hidden" name="color" value="<%= color %>">
                 <label for="productQty"><strong>Qty*</strong></label>
                 <select name="productQty" id="productQty">
                     <% for(let i = 0; i < 10; i++) { %>

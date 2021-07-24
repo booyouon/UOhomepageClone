@@ -211,6 +211,10 @@ input{
     padding-left: 25px;
 }
 
+#cartTable {
+  text-align: center;
+}
+
 #banner {
     width: 85%;
     margin: auto;
@@ -803,10 +807,6 @@ women.html, men.html, beauty.html, sale.html css
     flex-direction: row; 
     justify-content: space-between;
     padding-bottom: 10px;
-  }
-
-  #cartTable {
-    display: none;
   }
 
   #cartEmpty {
