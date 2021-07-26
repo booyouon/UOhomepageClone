@@ -13,6 +13,9 @@ const shopData = require('./data.json');
 const mongoose = require('mongoose');
 const Product= require('./models/product');
 
+//method-override
+const methodOverride = require('method-override')
+
 mongoose.connect('mongodb://localhost:27017/uoCart', {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log("mongo connection open");
@@ -30,6 +33,7 @@ app.use(express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free'
 
 //sets up urlencoded to read req.body
 app.use(express.urlencoded({extended:true}));
+app.use(methodOverride('_method'));
 
 //ejs set up
 app.set('view engine', 'ejs');
@@ -46,6 +50,18 @@ app.post('/cart' , async (req,res) => {
 app.get('/cart', async (req, res) => {
     const products = await Product.find({});
     res.render('cart', { products });
+})
+
+app.put('/cart/:id', async (req, res) => {
+    const { id } = req.params;
+    const deletedProduct = await Product.findByIdAndUpdate(id, req.body);
+    res.redirect(`/cart`);
+})
+
+app.delete('/cart/:id', async (req, res) => {
+    const { id } = req.params;
+    const deletedProduct = await Product.findByIdAndDelete(id);
+    res.redirect(`/cart`);
 })
 
 //pathways .get

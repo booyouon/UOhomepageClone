@@ -327,6 +327,15 @@ const collapseBtn = document.querySelectorAll(".collapseBtn");
 const shipCollapse = document.querySelectorAll(".shipCollapse");
 const fas = document.querySelectorAll(".fa-plus");
 
+
+const cartContent = document.querySelectorAll("#cartTable td")[1];
+const cartEmpty = document.querySelector("#cartEmpty");
+
+if (cartContent.innerHTML) {
+    cartEmpty.style.display = "none";
+}
+
+
 //toggle for the collapsibles on the bottom of shipping.html
 if (collapseBtn) {
     for (let i = 0; i < collapseBtn.length; i++) {

@@ -11,24 +11,54 @@
             </div>
             <hr>
 
+            <% let total = 0; %> 
+
                 <table id="cartTable">
                     <tr>
-                        <th>Img</th>
                         <th>Item</th>
-                        <th>Color</th>
                         <th>Item Price</th>
                         <th>Quantity</th>
                         <th>Total Price</th>
                     </tr>
+                    
+
                     <% for(let product of products) { %>
                         <tr>
-                            <td><img src="<%= product.img %>" alt="" style="width: 100px;"></td>
-                            <td><%= product.name %></td>
-                            <td><%= product.color %></td>
-                            <td><%= product.price %></td>
-                            <td><%= product.productQty %></td>
-                            <td><%= product.productQty * product.price %></td>
+                            <td style="width: 50%; margin:auto; display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+                                <img src="<%= product.img %>" alt="" style="width: 100px;">
+                                <div>
+                                    <p>
+                                        <%= product.name %> <br>
+                                        <strong>Color:</strong> <%= product.color %>
+                                    </p>
+                                </div>
+
+                            </td>
+                            <td>$<%= product.price %></td>
+                            <td>
+                                <form action="/cart/<%= product._id%>?_method=PUT" method="POST">
+                                    <label for="productQty"><strong>Qty*</strong></label>
+                                    <select name="productQty" id="productQty" onchange="this.form.submit();">
+                                        <% for(let i = 0; i < 10; i++) { %>
+                                            <option value="<%= i + 1 %>"><%= i + 1 %></option>
+                                        <% } %>
+                                    </select>
+                                </form>
+                                <%= product.productQty %>
+                            </td>
+                            <td>
+                                $<%= (Math.round(product.productQty * product.price * 100) / 100).toFixed(2); %>
+                                <div>
+                                    <form action="/cart/<%= product._id%>?_method=DELETE" method="POST">
+                                        <button>Remove</button>
+                                    </form>
+                                </div>
+                                
+                            </td>
+                            <% total = total + (product.productQty * product.price) %> 
+                            
                         </tr>
+                        
                     <% } %>
                 </table>
 
@@ -59,11 +89,11 @@
                     </tr>
                     <tr>
                         <td>Estimated Tax</td>
-                        <td style="text-align: right;">$0.00</td>
+                        <td style="text-align: right;">TBD</td>
                     </tr>
                     <tr>
                         <td style="font-weight: bold;">Total</td>
-                        <td style="text-align: right; font-weight: bold;">$0.00</td>
+                        <td style="text-align: right; font-weight: bold;">$<%= (Math.round(total * 100) / 100).toFixed(2); %></td>
                     </tr>
                 </table>
                 <button class="checkOutButtons" style="background-color: gray; border: none;">Proceed to Checkout</button> <br>
