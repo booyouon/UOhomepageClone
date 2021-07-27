@@ -782,6 +782,18 @@ women.html, men.html, beauty.html, sale.html css
     padding: 20px 0px
   }
 
+  #cartContainer button:hover{
+    opacity: 0.6;
+  }
+
+  #cartContainer select{
+    height: 50px;
+    width: 60px;
+    padding-left: 10px;
+    border-radius: 5px;
+    opacity: 0.6;
+  }
+
   #cartContainer h2 {
     font-weight: normal;
     font-size: 16px;
