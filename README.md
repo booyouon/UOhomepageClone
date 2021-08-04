@@ -14,9 +14,8 @@ Nodejs, Express
 NPM, github 
 
 ## Usage
-# to start:
-
 Start mongodb
 
 ```node
+# to start:
 npm start
