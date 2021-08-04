@@ -123,7 +123,16 @@ app.get('/UOMRKT', (req, res) => {
 app.get('/:product', (req, res) => {
     const { product } = req.params;
     const data = shopData[product];
-    res.render('product', { ...data });
+    if (data) {
+        res.render('product', { ...data });
+    }
+    else {
+        res.status(404).send('Page not found');
+    }
+})
+
+app.use((req,res) => {
+    res.status(404).send('Page not found');
 })
 
 //message to tell node which port to look at when uo.js is started
