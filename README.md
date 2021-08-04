@@ -8,7 +8,7 @@ Urban Outfitters Clone is a clone of the [Urban Outfitters website](https://www.
 HTML, CSS, Javascript, EJS, Fontawesome (for icons)
 
 ### Back-end:
-Nodejs, Express
+Nodejs, Express, Mongoose, Mongodb, method-override
 
 ### Other:
 NPM, github 
