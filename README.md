@@ -17,4 +17,5 @@ NPM, github
 
 ```node
 # to start:
+Start mongodb
 npm start
