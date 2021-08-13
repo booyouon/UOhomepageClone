@@ -4,7 +4,7 @@ Urban Outfitters Clone is a clone of the [Urban Outfitters website](https://www.
 
 ## Features
 * Functional cart that follows CRUD. Accomplished by accessing a collection database on mongoDB through mongoose.
-* Multi-page responsive design utilizing flexbox with a navbar that converts into a hambuger menu on smaller displays.
+* Multi-page responsive design utilizing flexbox with a navbar that converts into a hamburger menu on smaller displays.
 * Used AJAX in order to render the relevant elements on the product.ejs page depending on the requested product.
 
 ## Technologies Used
