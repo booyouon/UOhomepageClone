@@ -2,6 +2,8 @@
 
 Urban Outfitters Clone is a clone of the [Urban Outfitters website](https://www.urbanoutfitters.com/). I made this website in order to practice my HTML, CSS, and Javascript.
 
+Deployed App [here](https://uo-website-clone.herokuapp.com/)
+
 ## Features
 * Functional cart that follows CRUD. Accomplished by accessing a collection database on mongoDB through mongoose.
 * Multi-page responsive design utilizing flexbox with a navbar that converts into a hamburger menu on smaller displays.
