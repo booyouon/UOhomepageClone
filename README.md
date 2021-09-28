@@ -18,7 +18,7 @@ HTML, CSS, Javascript, EJS, Fontawesome (for icons)
 Nodejs, Express, Mongoose, Mongodb, method-override
 
 ### Other:
-NPM, github 
+NPM, github, Heroku
 
 ## Usage
 
