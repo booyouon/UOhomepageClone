@@ -19,8 +19,9 @@ Nodejs, Express, Mongoose, Mongodb, method-override
 NPM, github 
 
 ## Usage
-Start mongodb
 
 ```node
+Start mongodb
 # to start:
+npm i
 npm start
