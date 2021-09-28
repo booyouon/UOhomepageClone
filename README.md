@@ -21,7 +21,7 @@ NPM, github
 ## Usage
 
 ```node
-Start mongodb
-# to start:
+Note: Make sure to start mongodb
+# to start the website run the following:
 npm i
 npm start
