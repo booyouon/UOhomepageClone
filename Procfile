@@ -1,1 +1,1 @@
-web: node uo.js
+web: npm start
