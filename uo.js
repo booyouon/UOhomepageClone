@@ -14,9 +14,10 @@ const Product = require("./models/product");
 
 //method-override
 const methodOverride = require("method-override");
+const exp = require("constants");
 
 mongoose
-  .connect("mongodb://localhost:27017/uoCart", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/uoCart", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
